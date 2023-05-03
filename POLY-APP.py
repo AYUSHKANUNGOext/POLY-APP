@@ -3,9 +3,6 @@ import streamlit as st  #Web App
 import speech_recognition as sr
 from PIL import Image #Image Processing
 import numpy as np #Image Processing 
-# from s import Button
-# from bokeh.models import CustomJS
-# from streamlit_bokeh_events import streamlit_bokeh_events
 import os
 import time
 import glob
@@ -14,8 +11,6 @@ from googletrans import Translator
 import base64
 
 st.markdown("<h1 style='text-align: center; color: white;'>POLY</h1>", unsafe_allow_html=True)
-
-# st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 
 st.sidebar.title("Contents")
 
@@ -187,32 +182,4 @@ if page == "Speech Recognition":
     if st.button("Start Recording"):
         speech_to_text(language)
 
-        
-# if __name__ == '__main__':
-#     st.title("Speech Recognition")
-
-
     
-
-    # def speech_to_text():
-    # # create a recognizer object
-    #     recognizer = sr.Recognizer()
-
-    # # ask user to speak
-    #     st.write("Speak now:")
-
-    # # obtain audio from the microphone
-    #     with sr.Microphone() as source:
-    #         audio = recognizer.listen(source)
-
-    #     try:
-    #     # recognize speech using Google Speech Recognition
-    #         text = recognizer.recognize_google(audio)
-    #         st.write("You said: " + text)
-    #     except sr.UnknownValueError:
-    #         st.write("Sorry, I could not understand what you said.")
-    #     except sr.RequestError as e:
-    #         st.write("Error occurred during the request: {}".format(e))
-
-    # if st.button("Start Recording"):
-    #     speech_to_text()
